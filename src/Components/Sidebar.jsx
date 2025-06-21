@@ -12,29 +12,14 @@ const Sidebar = () => {
           </button>
         </div>
 
-        {/* Search Input */}
-        <div className="relative">
-          <span className="absolute inset-y-0 left-0 flex items-center pl-3">
-            <button
-              type="submit"
-              className="p-2 focus:outline-none focus:ring"
-              aria-label="Search"
-            >
-              {/* Search icon can be inserted here */}
-            </button>
-          </span>
-         
-				 
-        </div>
-
         {/* Navigation Links */}
         <nav className="flex-1 pt-2 pb-4">
           <ul className="space-y-1 text-sm">
             {[
               { label: "Blog Upload", href: "/upload-blog" },
-              { label: "All Blog", href: "#" },
-              { label: "Gallery Image", href: "#" },
-              { label: "All Image", href: "#" },
+              { label: "All Blog", href: "" },
+              { label: "Gallery Image", href: "/upload-image" },
+              { label: "All Image", href: "" },
               { label: "News", href: "#", active: true },
               { label: "All News", href: "#" },
             ].map(({ label, href, active }) => (

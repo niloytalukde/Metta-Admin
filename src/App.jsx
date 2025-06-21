@@ -2,6 +2,7 @@ import React from "react";
 import { Route, Routes } from "react-router";
 import Sidebar from "./Components/Sidebar";
 import UploadBlog from "./Components/UploadBlog";
+import ImageUpload from "./Components/UploadIamge";
 
 export default function App() {
   return (
@@ -15,6 +16,7 @@ export default function App() {
       <div className="col-span-9  p-4">
         <Routes>
           <Route path="/upload-blog" element={<UploadBlog />} />
+          <Route path="/upload-image" element={<ImageUpload/>} />
           {/* Add more routes as needed */}
         </Routes>
       </div>
