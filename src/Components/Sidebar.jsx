@@ -1,4 +1,4 @@
-import React from "react";
+import { Link } from "react-router";
 
 const Sidebar = () => {
   return (
@@ -6,7 +6,7 @@ const Sidebar = () => {
       <div className="space-y-3">
         {/* Header */}
         <div className="flex items-center justify-between">
-          <h2 className="text-lg font-bold">Dashboard</h2>
+          <Link to={"/upload-blog"}><h2 className="text-lg font-bold">Dashboard</h2></Link>
           <button className="p-2" aria-label="Options">
             {/* Icon or settings can go here */}
           </button>
@@ -14,14 +14,14 @@ const Sidebar = () => {
 
         {/* Navigation Links */}
         <nav className="flex-1 pt-2 pb-4">
-          <ul className="space-y-1 text-sm">
+          <ul className="space-y-1 text-md font-bold">
             {[
               { label: "Blog Upload", href: "/upload-blog" },
-              { label: "All Blog", href: "" },
+              // { label: "All Blog", href: "" },
               { label: "Gallery Image", href: "/upload-image" },
-              { label: "All Image", href: "" },
-              { label: "News", href: "#", active: true },
-              { label: "All News", href: "#" },
+              // { label: "All Image", href: "" },
+              { label: "Facebook Link", href: "/upload-facebook-link", },
+              { label: "Youtube Link", href: "/upload-youtube-link" },
             ].map(({ label, href, active }) => (
               <li key={label}>
                 <a
@@ -54,25 +54,6 @@ const Sidebar = () => {
             </li>
           </ul>
         </nav>
-      </div>
-
-      {/* User Profile */}
-      <div className="flex items-center p-2 mt-12 space-x-4">
-        <img
-          src="https://source.unsplash.com/100x100/?portrait"
-          alt="User avatar"
-          className="w-12 h-12 rounded-lg bg-gray-500"
-        />
-        <div>
-          <h3 className="text-lg font-semibold">Leroy Jenkins</h3>
-          <a
-            href="#"
-            rel="noopener noreferrer"
-            className="text-xs text-gray-400 hover:underline"
-          >
-            View profile
-          </a>
-        </div>
       </div>
     </aside>
   );

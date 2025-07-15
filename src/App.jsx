@@ -3,6 +3,8 @@ import { Route, Routes } from "react-router";
 import Sidebar from "./Components/Sidebar";
 import UploadBlog from "./Components/UploadBlog";
 import ImageUpload from "./Components/UploadIamge";
+import FacebookLink from "./Components/FacebookLink";
+import YoutubeLink from "./Components/YoutubeLink";
 
 export default function App() {
   return (
@@ -17,7 +19,9 @@ export default function App() {
         <Routes>
           <Route path="/upload-blog" element={<UploadBlog />} />
           <Route path="/upload-image" element={<ImageUpload/>} />
-          {/* Add more routes as needed */}
+          <Route path="/upload-facebook-link" element={<FacebookLink/>} />
+          <Route path="/upload-youtube-link" element={<YoutubeLink/>} />
+        
         </Routes>
       </div>
     </div>
