@@ -5,6 +5,7 @@ import UploadBlog from "./Components/UploadBlog";
 import ImageUpload from "./Components/UploadIamge";
 import FacebookLink from "./Components/FacebookLink";
 import YoutubeLink from "./Components/YoutubeLink";
+import News from "./Components/News";
 
 export default function App() {
   return (
@@ -18,6 +19,7 @@ export default function App() {
       <div className="col-span-9  p-4">
         <Routes>
           <Route path="/upload-blog" element={<UploadBlog />} />
+          <Route path="/upload-news" element={<News/>} />
           <Route path="/upload-image" element={<ImageUpload/>} />
           <Route path="/upload-facebook-link" element={<FacebookLink/>} />
           <Route path="/upload-youtube-link" element={<YoutubeLink/>} />

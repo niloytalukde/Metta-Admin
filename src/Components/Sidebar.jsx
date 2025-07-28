@@ -17,6 +17,7 @@ const Sidebar = () => {
           <ul className="space-y-1 text-md font-bold">
             {[
               { label: "Blog Upload", href: "/upload-blog" },
+              { label: "News Upload", href: "/upload-news" },
               // { label: "All Blog", href: "" },
               { label: "Gallery Image", href: "/upload-image" },
               // { label: "All Image", href: "" },
