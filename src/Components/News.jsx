@@ -2,7 +2,7 @@ import { useState } from "react";
 import axios from "axios";
 
 const News = () => {
-  const [previewImage, setPreviewImage] = useState('');
+  const [previewImage, setPreviewImage] = useState(null); // changed from ''
   const [uploading, setUploading] = useState(false);
 
   const handleUpload = async (e) => {
@@ -38,18 +38,22 @@ const News = () => {
         content,
       };
 
+      console.log("News data prepared:", newsData);
+
       // Post news data to backend
       const response = await axios.post(
         `${import.meta.env.VITE_URL}/news/create-news`,
         newsData
       );
 
+      console.log(response);
+
       console.log("News uploaded:", newsData);
       alert("News uploaded successfully!");
 
       // Reset form
       form.reset();
-      setPreviewImage(null);
+      setPreviewImage(null); 
     } catch (err) {
       console.error("Upload failed", err);
       alert("Upload failed!");
