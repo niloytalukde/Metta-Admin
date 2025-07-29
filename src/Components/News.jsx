@@ -44,7 +44,7 @@ const News = () => {
         newsData
       );
 
-      console.log("News uploaded:", response.data);
+      console.log("News uploaded:", newsData);
       alert("News uploaded successfully!");
 
       // Reset form
