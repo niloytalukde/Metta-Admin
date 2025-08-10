@@ -9,8 +9,6 @@ const ImageUpload = () => {
 
     const data = new FormData();
     data.append("image", imagedata);
-
-    console.log(imagedata);
     const imageResponse = await axios.post(
       "https://api.imgbb.com/1/upload?key=918213795f0109863777729e33762291",
       data
